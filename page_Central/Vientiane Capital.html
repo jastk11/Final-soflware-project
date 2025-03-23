@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laos</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+    </head>
+    <body class="w-full h-screen font-serif">
+        <nav
+            class="fixed top-0 left-0 w-full h-[90px] bg-white shadow-md py-4 px-8 flex justify-between items-center z-50">
+
+        <!-- logo -->
+            <div
+                class="w-xl flex items-center justify-center gap-2 justify-between">
+                <img
+                    class="w-[50px] h-[50px] rounded-full items-center flex cursor-pointer"
+                    src="/img/Logo.jpeg"
+                    alt="Loading...">
+                <h1 class="text-black text-[30px] font-bold cursor-pointer">Best
+                    Vacation</h1>
+            </div>
+
+        <!-- Button -->
+
+            <div class="items-center justify-center flex gap-4 p-4 relative">
+                <!-- Home -->
+                <div class="relative">
+                    <button
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 duration-300 flex flex-col items-center">
+                        <a href="/Home.html" class="flex flex-row items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 mb-1 mr-2 hover:text-gray-500">
+                                <path
+                                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                                <path
+                                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                            </svg>
+
+                            Home
+                        </a>
+                    </button>
+
+                </div>
+
+        <!-- Dropdown-North -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown')"
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                        North
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 ml-2 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </button>
+                    <div id="dropdown"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="/page_North/Luang Prabang.html"
+                            class="block hover:bg-gray-200 p-2">Luang Prabang</a>
+                        <a href="/page_North/Xieng Khouang.html"
+                            class="block hover:bg-gray-200 p-2">Xieng Khouang</a>
+                    </div>
+                </div>
+
+        <!-- Dropdown-Central -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown2')"
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex flex-row items-center justify-center gap-2">
+                        Central
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </button>
+                    <div id="dropdown2"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="/page_Central/Vientiane Capital.html"
+                            class="block hover:bg-gray-200 p-2">Vientiane Capital</a>
+                        <a href="/page_Central/Vientiane Province.html"
+                            class="block hover:bg-gray-200 p-2">Vientiane Province</a>
+                        <a href="/page_Central/Xaysomboun.html"
+                            class="block hover:bg-gray-200 p-2">Xaysomboun</a>
+
+                    </div>
+                </div>
+
+        <!-- Dropdown-South -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown3')"
+                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                        South
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 ml-2 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+
+                    </button>
+                    <div id="dropdown3"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="/page_South/Champasak.html"
+                            class="block hover:bg-gray-200 p-2">Champasak</a>
+                        <a href="/page_South/Salavan.html"
+                            class="block hover:bg-gray-200 p-2">Salavan</a>
+                        <a href="/page_South/Attapeu.html"
+                            class="block hover:bg-gray-200 p-2">Attapeu</a>
+                    </div>
+                </div>
+
+        <!-- Suggest -->
+                <div class="relative">
+                    <button
+                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 duration-300 flex items-center justify-center">
+                        <a href="#suggest"
+                            class="flex items-center">
+                            Suggest
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="w-5 h-5 ml-2 hover:text-gray-500">
+                                <path
+                                    d="M6 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6ZM15.75 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3h-2.25ZM6 12.75a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3v-2.25a3 3 0 0 0-3-3H6ZM17.625 13.5a.75.75 0 0 0-1.5 0v2.625H13.5a.75.75 0 0 0 0 1.5h2.625v2.625a.75.75 0 0 0 1.5 0v-2.625h2.625a.75.75 0 0 0 0-1.5h-2.625V13.5Z" />
+                            </svg>
+                        </a>
+                    </button>
+
+                </div>
+            </div>
+
+        <!-- Button-login-logout -->
+            <button class="relative" id="btnLogin">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor" 
+                    class="size-12">
+                    <path fill-rule="evenodd"
+                        d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </nav>
+
+    <!-- main -->
+    <main class="mt-[100px]">
+
+        <h1 class="text-[60px] font-bold text-center">Vientiane Capital</h1>
+
+
+        <!-- hr -->
+        <div class="flex items-center justify-center p-4">
+            <hr class="border-black border-3 w-[40%]">
+        </div>
+        
+        <!-- Mother1 div -->
+        <div class="flex flex-col items-center justify-center p-4 gap-2">
+            
+            <!-- Patuxai -->
+            <h1 class="text-[30px] font-bold p-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                   class="size-8 text-red-500 mb-2">
+                   <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg> 
+                Patuxai</h1>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-[350%]">
+                    <img src="/img/Patuxay.jpg" alt="">
+                </div>
+                <div class="w-[350%]">
+                    <p>
+                        Patuxai is a compound word, 'Patuu' or 'patu' meaning a "door" or "gateway" and 'Xai', derivative of the Sanskrit 'Jaya', which mean s "victory". Thus it means “Victory Gate”. The Patuxai was built during a turbulent period Lao history. It was built when Laos was a constitutional monarchy and was originally known simply as the "Anousavali" ("Monument"), dedicated memory of the Laotian soldiers who died during World War II and the independence war from France in 1949.
+                        <br><br>
+                        The monument was built using American funds and cement actually intended to build a new airport.The Royal Laotian Government instead built the monument, which earned it the nickname of the "vertical runway. The monument was designed by Laotian “soldier, former journalist and self-taught sculptor Tham Sayasthsena. In 1957, his plans were selected from those submitted by the Public Works Department, the Military Engineering Department, and numerous private architects. Tham received 30,000 kips for his work. The cost of construction was estimated at 63 million kips.
+                        <br><br>
+                        In May 1975, the communist Pathet Lao overthrew the coalition government and seized power, ending the ancient monarchy and installing a half-Vietnamese prime minister. They renamed the monument Patuxai in honor of the victory that was handed to them by the North Vietnamese Army.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="flex gap-2">
+              <div> <img src="/img/patuxai6.jpg" alt=""></div>
+              <div> <img src="/img/pt.jpg" alt=""></div>
+              <div> <img src="/img/patuxai3.jpeg" alt=""></div>
+            </div>
+
+        </div>
+        <!-- /Mother1 div/ -->
+
+        <!-- hr -->
+        <div id="suggest" class="flex items-center justify-center p-4">
+            <hr class="border-black w-[90%]">
+        </div>
+
+        <!-- Mother2 div -->
+        <div class="flex flex-col items-center justify-center p-4 gap-2">
+
+            <!-- Lao Art Mseum -->
+            <h1 class="text-[30px] font-bold p-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                   class="size-8 text-red-500 mb-2">
+                   <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg> 
+                Lao Art Mseum</h1>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-[350%]">
+                    <img src="/img/Laoart.jpg" alt="">
+                </div>
+                <div class="w-[350%]">
+                    <p>
+                        The newly opened Lao Art Museum in Vientiane, a USD 50 million project spanning 80 hectares, aims to be a major tourist and cultural landmark. Opened on January 5th, 2024, it currently features four zones, with ongoing construction expected to finalize by mid-February, including shops, restaurants, and an artificial waterfall. Future plans include hotels and resorts.
+                        <br><br>
+                        Despite its grand opening, concerns have arisen regarding its readiness, with visitors noting ongoing construction and incomplete facilities. Executive Director Areya Sayathith acknowledged these issues, citing staffing, management, security, and incomplete zones as reasons for partial closures.
+                        <br><br>
+                        While praised for its beauty and traditional art, some criticize the high entrance fees (USD 15 for foreigners, LAK 100,000 for Lao citizens) considering the incomplete state. Stephan R. Aeschbach, a long-term Laos resident, found the museum impressive but suggested the fee is premature until all facilities and exhibits are available.
+                        <br><br>
+                        The museum is open daily, with current foreigner entry at USD 10 due to partial closures, and plans for online booking in the future. The project intends to showcase Lao art and become a hub for artistic exchange, but faces challenges balancing its ambition with its current state of completion.
+                        
+                    </p>
+                </div>
+            </div>
+    
+            <div class="flex gap-2">
+              <div class="w-[35%]"> <img src="/img/Laoart1.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/Laoart4.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/Laoart3.jpg" alt=""></div>
+            </div>
+
+        </div>
+        <!-- /Mother2 div/ -->
+
+        <!-- hr -->
+        <div id="suggest" class="flex items-center justify-center p-4">
+            <hr class="border-black w-[90%]">
+        </div>
+
+        <!-- Mother3 div -->
+        <div class="flex flex-col items-center justify-center p-4 gap-2">
+
+            <!-- That Luang -->
+            <h1 class="text-[30px] font-bold p-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                   class="size-8 text-red-500 mb-2">
+                   <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg> 
+                That Luang</h1>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-[350%]">
+                    <img src="/img/ThatLuang.jpg" alt="">
+                </div>
+                <div class="w-[350%]">
+                    <p>
+                        Pha That Luang, a 147-foot Buddhist stupa in Vientiane, Laos, is a significant cultural and religious landmark, originally built in 1566 by King Setthathirat. Its three tiers symbolize the path to enlightenment, reflecting Buddhist teachings and Lao history.
+                        <br><br>
+                        The stupa stands on the site of an ancient Cham obelisk, with archaeological evidence supporting its pre-16th-century origins. King Saysetthathirath's construction aimed to establish a prominent Buddhist site after moving the capital to Vientiane, drawing inspiration from Chiang Mai's Grand Stupa.
+                        <br><br>
+                        Pha That Luang serves as a center for religious and cultural practices, featuring some of Vientiane's oldest archaeology. The annual That Luang Festival, held in November, is Laos' most revered celebration, honoring the stupa and King Xaysetthathirath.
+                        <br><br>
+                        The festival attracts people nationwide, who participate in traditional activities like wax castle processions, almsgiving, and candlelit ceremonies. King Saysetthathirath also intended the festival to unite his kingdom and test the loyalty of his administrators, while honoring King Fa Ngum's role in spreading Buddhism.
+                        <br><br>
+                        The stupa's design and the annual festival highlight the deep connection between Buddhism, Lao royalty, and the nation's cultural identity. It's a key tourist attraction and a testament to Laos' ancient heritage, embodying both religious devotion and historical significance.
+                        
+                    </p>
+                </div>
+            </div>
+    
+            <div class="flex gap-2">
+              <div class="w-[35%]"> <img src="/img/tl2.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/tl1.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/ThatLuang3.jpg" alt=""></div>
+            </div>
+
+        </div>
+        <!-- /Mother3 div/ -->
+
+        <!-- hr -->
+        <div id="suggest" class="flex items-center justify-center p-4">
+            <hr class="border-black w-[90%]">
+        </div>
+
+        <!-- Mother4 div -->
+        <div class="flex flex-col items-center justify-center p-4 gap-2">
+
+            <!--  Majestic Buddha Park – Xieng Khuan -->
+            <h1 class="text-[30px] font-bold p-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                   class="size-8 text-red-500 mb-2">
+                   <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg> 
+                Majestic Buddha Park – Xieng Khuan</h1>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-[350%]">
+                    <img src="/img/wxk.jpg" alt="">
+                </div>
+                <div class="w-[350%]">
+                    <p class="text-[14px]">
+                        After leaving Vientiane on our way to the 4000 Islands in the South of Laos we passed a monumental and historic treasure site you shouldn´t miss if you are around. The local name is Xieng Khuan, but the English words for this area make it self-explanatory for what it’s about. The Buddha Park is a park filled up with over 200 Hindu and Buddhist statues. There are several Buddhas spread across the square, as well scenes from ancient legends and numerous gods and goddesses.
+                        <br>
+                        The historic site is located about 25 km southeast from the capital in a meadow by the Mekong River. It is a sculptural park, not a temple or shrine, but because of the numerous religious images the locals call it still „Wat“ Xieng Khuan, which means „Temple“. 
+                        <br>
+                        In 1958 the priest-shaman Luang Pu Bunleua Sulilat started with the Buddha Park and gathering statues. After the revolution in 1975 he had to flew the country but started soon a second Buddha Park close to the first one on the oposite side of the Mekong River in Thailand. It is possible to see the Lao Buddha Park from the Thailand Buddha Park.
+                        <br>
+                        The statues are made of reinforced concrete covered with ornaments, the design can be bizarre sometimes. They appear to be centuries old, though they are not and especially prepared to look like that. There are sculptures of humans, gods, animals, and demons, as well numerous statues of Buddha, characters of Buddhist beliefs like Avalokiteśvara, and characters of Hindu lore, including Shiva, Vishnu, and Arjuna.
+                        <br>
+                        Particularly to mention would be the quite huge chilling statue which ten times longer thant the other ones and another notable sculpture resembles a giant pumpkin, which you can enter. It has three stories representing the three levels Hell, Earth and Heaven. You can step in through a mouth of a three meter tall demon head and explore the inside tomb filled with many more smaller figures or definitly as well climb on the top to have a phenomenal lookout over the whole park.
+                        <br>
+                        The sculptures haven´t been made by skilled artists, just by normal unknown workers. Still they are well created and just give you a lot of times a goosebumbs effect. It is very impressively walking through a garden over and over filled with stone sculptures which are representing transcendent spirits. We felt in some way humbled, but also honored while walking through the hall of the majestic gods. And then after spending nearly enough enjoyable time at the Buddha Park quite a storm started. Still warm, but chaotic windy and the sky went dark for half an hour. I won´t forgett that visit, it was just fantastic! The thunder storm ending made it even more mysterious and energetic.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="flex gap-2">
+              <div class="w-[35%]"> <img src="/img/wxk1.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/wxk2.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/wxk3.jpg" alt=""></div>
+            </div>
+
+        </div>
+        <!-- /Mother4 div/ -->
+
+
+        
+         
+
+
+        <!-- Footer -->
+        <footer class="bg-gray-300 relative absolute mt-[50px]">
+
+            <div class="p-[10px] ml-[90px]">
+                <h1 class="absolute mt-[20px] font-bold text-[30px] text-pink-800">Best Vacation</h1>
+            </div>
+
+            <div class="flex items-start justify-center justify-between p-[100px]">
+
+                <div>
+                    <p class="font-bold mb-2">Site quick links</p>
+                    <p>Flights</p>
+                    <p>Stays</p>
+                    <p>Holidays</p>
+                    <p>Car hire</p>
+                    <p>Tours</p>
+                    <p>Cruises</p>
+                    <p>Rail</p>
+                    <p>Experiences & Day Tours</p>
+                    <p>Business Travel</p>
+                    <p>Publications</p>
+                    <p>Travel Blog</p>
+                    <p>Deals</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Company</p>
+                    <p>About us</p>
+                    <p>Corporate Site</p>
+                    <p>Careers</p>
+                    <p>Advertising</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Extras</p>
+                    <p>Insurance</p>
+                    <p>Gift cards</p>
+                    <p>Holiday finance</p>
+                    <p>Captain's Pack</p>
+                    <p>Online Captain's Pack</p>
+                    <p>Travel eSIM</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Help & support</p>
+                    <p>Help centre</p>
+                    <p>Contact us</p>
+                    <p>Contact us</p>
+                    <p>Privacy</p>
+                    <p>Cookies</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Login -->
+        <div class="relative">
+            <div id="login" class="fixed  top-[160px] right-[30%]  z-[3] "
+                style="display: none;">
+                <div
+                    class=" mb-[980px] bg-[#F4F8F9] w-[500px] h-[500px] flex flex-col items-center justify-center rounded-[10px] gap-[30px] bg-no-repeat bg-cover bg-center"
+                    style="background-image: url(/img/village-bungalows-along-nam-song-river-vang-vieng-laos.jpg);">
+                    <div>
+                        <p id="close"
+                            class=" relative left-[300px] buttom-0 text-[10px] text-[30px] pt-[80px] cursor-pointer">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </p>
+                        <h1 class="text-black font-bold text-[30px] mt-[10px]">
+                            Login Account
+                        </h1>
+                    </div>
+                    <!-- Head -->
+                    <div class="p-[10px]">
+                        <!-- Username -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path fill-rule="evenodd"
+                                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            <input
+                                class="w-[450px] h-[40px] text-15px shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="text" placeholder="Username">
+                        </div>
+
+                        <!-- email -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path
+                                    d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                <path
+                                    d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                            </svg>
+
+                            <input
+                                class="w-[450px] h-[40px] text-[15px] shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="email" placeholder="Email">
+                        </div>
+
+                        <!-- password -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path fill-rule="evenodd"
+                                    d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <input
+                                class="w-[450px] h-[40px] text-[15px] shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="password" placeholder="Password">
+                        </div>
+
+                        <!-- Forgot-password -->
+                        <div class="p-[10px]">
+                            <p
+                                class="text-blue-900 font-bold text-[12px] ml-[350px] underline underline-offset-2"><a
+                                    href="#">Forgot password</a></p>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <div class="mb-[100px]">
+                        <button
+                            class="bg-black hover:bg-gray-800 duration-300 text-white text-[20px] w-[200px] h-[50px] rounded-[10px] font-bold">
+                            <a href="/Home.html">Login</a></button>
+                    </div>
+                </div>
+            </div>
+
+        <!-- JavaScript -->
+         <script>
+const login = document.getElementById('login')
+const btnLogin = document.getElementById('btnLogin')
+const close = document.getElementById('close')
+
+// open Login page show
+btnLogin.addEventListener('click', function (){
+    login.style.display = 'block';
+})
+
+// close login page
+close.addEventListener('click', function (){
+    login.style.display = 'none';
+})
+
+// Function to toggle dropdown visibility
+function toggleDropdown(id) {
+    // Get the dropdown being clicked
+    const currentDropdown = document.getElementById(id);
+    
+    // Close all dropdowns except the one being toggled
+    document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
+        if (dropdown.id !== id) {
+            dropdown.classList.add('hidden');
+        }
+    });
+
+    
+    // Toggle the clicked dropdown
+    currentDropdown.classList.toggle('hidden');
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+    // Check if the click was outside dropdown buttons and menus
+    if (!event.target.closest('button[onclick^="toggleDropdown"]') && 
+        !event.target.closest('#dropdown, #dropdown2, #dropdown3')) {
+        // Close all dropdowns
+        document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
+            dropdown.classList.add('hidden');
+        });
+    }
+});
+         </script>
+
+    </body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lao Art Mseum</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+    </head>
+    <body class="w-full h-screen font-serif">
+        <!-- navbar -->
+        <nav
+            class="fixed top-0 left-0 w-full h-[100px] bg-white shadow-md py-4 px-8 flex justify-between items-center z-50">
+
+        <!-- logo -->
+            <div
+                class="w-xl flex items-center justify-center gap-2 justify-between">
+                <img
+                    class="w-[50px] h-[50px] rounded-full items-center flex cursor-pointer"
+                    src="/img/Logo.jpeg"
+                    alt="Loading...">
+                <h1 class="text-black text-[30px] font-bold cursor-pointer">Best
+                    Vacation</h1>
+            </div>
+
+        <!-- Button -->
+
+            <div class="absolute items-center justify-center flex gap-4 p-4 relative">
+                <!-- Home -->
+                <div class="relative">
+                    <button
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 duration-300 flex flex-col items-center">
+                        <a href="../Home.html" class="flex flex-row items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 mb-1 mr-2 hover:text-gray-500">
+                                <path
+                                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                                <path
+                                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                            </svg>
+
+                            Home
+                        </a>
+                    </button>
+
+                </div>
+
+        <!-- Dropdown-North -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown')"
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                        North
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 ml-2 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </button>
+                    <div id="dropdown"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="../page_North/Luang Prabang.html"
+                            class="block hover:bg-gray-200 p-2">Luang Prabang</a>
+                        <a href="../page_North/Xieng Khouang.html"
+                            class="block hover:bg-gray-200 p-2">Xieng Khouang</a>
+                    </div>
+                </div>
+
+        <!-- Dropdown-Central -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown2')"
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex flex-row items-center justify-center gap-2">
+                        Central
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </button>
+                    <div id="dropdown2"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="../page_Central/Vientiane Capital.html"
+                            class="block hover:bg-gray-200 p-2">Vientiane Capital</a>
+                        <a href="../page_Central/Vientiane Province.html"
+                            class="block hover:bg-gray-200 p-2">Vientiane Province</a>
+                        <a href="../page_Central/Xaysomboun.html"
+                            class="block hover:bg-gray-200 p-2">Xaysomboun</a>
+
+                    </div>
+                </div>
+
+        <!-- Dropdown-South -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown3')"
+                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                        South
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 ml-2 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+
+                    </button>
+                    <div id="dropdown3"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="../page_South/Champasak.html"
+                            class="block hover:bg-gray-200 p-2">Champasak</a>
+                        <a href="../page_South/Salavan.html"
+                            class="block hover:bg-gray-200 p-2">Salavan</a>
+                        <a href="../page_South/Attapeu.html"
+                            class="block hover:bg-gray-200 p-2">Attapeu</a>
+                    </div>
+                </div>
+
+        <!-- Suggest -->
+                <div class="relative">
+                    <button
+                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 duration-300 flex items-center justify-center">
+                        <a href="#"
+                            class="flex items-center">
+                            Suggest
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="w-5 h-5 ml-2 hover:text-gray-500">
+                                <path
+                                    d="M6 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6ZM15.75 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3h-2.25ZM6 12.75a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3v-2.25a3 3 0 0 0-3-3H6ZM17.625 13.5a.75.75 0 0 0-1.5 0v2.625H13.5a.75.75 0 0 0 0 1.5h2.625v2.625a.75.75 0 0 0 1.5 0v-2.625h2.625a.75.75 0 0 0 0-1.5h-2.625V13.5Z" />
+                            </svg>
+                        </a>
+                    </button>
+
+                </div>
+            </div>
+
+
+        <!-- Button-login-logout -->
+            <button class="relative" id="btnLogin">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor" 
+                    class="size-12">
+                    <path fill-rule="evenodd"
+                        d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </nav>
+    <!-- </navbar> -->
+
+
+    <!-- main -->
+        <main>
+            <div class=" p-[200px]">
+                
+                <div class="flex items-center justify-center">
+                    <h1 class="font-bold text-[50px] mb-[50px] ">Lao Art Mseum</h1>
+                </div>
+
+                <img class="rounded-[15px] w-full" src="/img/Laoart.jpg" alt="Loading...">
+                <p class="p-4 text-[18px]">
+                    The new Lao Art Museum officially opened on 5 January in Vientiane’s 
+                    Nonsaart village, Xaythany district. 
+                    <br><br>
+                    Construction of the Museum began in 2021 with a budget of over USD 50 million.
+                    <br><br>
+                    Covering 80 hectares, the museum complex currently features four zones, including 
+                    the information building and a reception area, an arts and culture exhibition hall, 
+                    an observation hall, and a multi-purpose building. 
+                    <br><br>
+                    However, construction is still ongoing with more facilities expected to open 
+                    throughout the year. The venue is scheduled to be finalized by mid-February 
+                    with wood carvings and paintings, souvenirs shop, restaurant and beverage options, 
+                    an artificial waterfall and other attractions.
+                    <br><br>
+                    The hotels and resorts are currently under construction under Phase 2 of the plan. 
+                    The completion date is yet to be identified. 
+                    <br><br>
+                    This new landmark is set to become a major tourist destination while offering a space 
+                    for learning and conservation.
+                    <br><br>
+                    After the grand opening, some people expressed concerns, particularly about the museum’s 
+                    readiness. While the official opening is scheduled for mid-February, some visitors have 
+                    raised concerns about the museum’s readiness for public access. Questions about areas 
+                    still under construction and the entrance fee have been circulating.
+                    <br><br>
+                    Areya Sayathith, Executive Director of the Lao Art Museum, addressed these concerns, 
+                    explaining that certain zones are accessible to visitors, but some areas remain closed 
+                    for construction and are not yet ready for public viewing.
+                    <br><br>
+                    “The reason why we are still unable to welcome tourists is because we do not have enough 
+                    staff, the management system is not systematic, security staff and system, and some zones 
+                    are not 100 percent complete,” she said.
+                    <br><br>
+                    While some users offered congratulations to the Lao Art Museum for its beauty and traditional 
+                    art, others are asking for clearer information. 
+                    <br><br>
+                    Stephan R. Aeschbach, President of J&C Group, living and working in Laos for over 23 years, had 
+                    the chance to visit the Lao Art Museum shortly after the opening.
+                    <br><br>
+                    “I’m incredibly excited that Laos now boasts such a magnificent landmark, a must-see destination 
+                    for all visitors to the country, I am confident that it will showcase a wider range of Laotian 
+                    art, become a hub for artistic interaction and exchange, and offer a diverse array of workshops 
+                    for artists” he said. 
+                    <br><br>
+                    “The museum is a stunning sight, particularly the dramatic entrance via a floating stage across 
+                    the lake. While still under construction, the sheer scale and beauty of this project are already impressive.”
+                    <br><br>
+                    But aside from the beauty and grandeur of the new structure, he has reservations regarding the entrance fees.
+                    <br><br>
+                    “Considering the museum is still under construction, with many facilities and areas remaining 
+                    closed, and the current exhibit primarily focuses on wooden carvings, the entrance fee of USD 
+                    15 for foreigners (LAK 100,000 for Lao citizens) seems rather high. Once construction is complete, 
+                    all facilities are open to the public, and a diverse collection of Lao art is on display, this 
+                    entrance fee may become more appropriate” Aeschbach said. 
+                    <br><br>
+                </p>
+                <img class="p-4 rounded-[25px]" src="/img/Laoart5.jpg" alt="Loading...">
+                <p class="p-4 text-[18px]">
+                    “Considering the museum is still under construction, with many facilities and areas remaining 
+                    closed, and the current exhibit primarily focuses on wooden carvings, the entrance fee of USD 
+                    15 for foreigners (LAK 100,000 for Lao citizens) seems rather high. Once construction is complete, 
+                    all facilities are open to the public, and a diverse collection of Lao art is on display, this 
+                    entrance fee may become more appropriate” Aeschbach said. 
+                    <br><br>
+                    The full entry fee for Lao nationals is LAK 100,000, while for foreigners, it is LAK 220,000 or USD 15. 
+                    However, foreigners currently pay only USD 10 because some parts of the museum are not yet open for 
+                    viewing. Tourists can pay by cash, credit card or bank transfer. An online booking system will be available 
+                    in the future.
+                    <br><br>
+                    The museum is open daily from 8:00 AM to 7:00 PM, with the last entry at 4:00 PM.
+                </p>
+                <div class="absolute relative grid grid-cols-2 md:grid-cols-2 gap-4 p-4">
+                    <div><img class="rounded-lg w-full" src="/img/Laoart1.jpg" alt=""></div>
+                    <div><img class="rounded-lg w-full h-full" src="/img/Laoart2.jpg" alt=""></div>
+                    <div><img class="rounded-lg w-full" src="/img/Laoart3.jpg" alt=""></div>
+                    <div><img class="rounded-lg w-full" src="/img/Laoart4.jpg" alt=""></div>
+                </div>
+
+                <!-- hr -->
+                <div class="flex items-center justify-center p-4 mt-4">
+                    <hr class="absolute border-black w-[90%]">
+                </div>
+
+                <!-- Location -->
+                <div class="text-center flex flex-col items-center justify-center gap-[10px]">
+                    <h1 class="text-[30px] font-bold">Navigation  Google Map</h1>
+                    <p class="text-[20px]">Click here</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+                      </svg>                      
+                    <a href="#"><img class="w-[3000px] h-[400px] rounded-[100px]" src="/img/MapThatLuang.png" alt=""></a>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+        <footer class="bg-gray-300 relative absolute mt-[50px]">
+
+            <div class="p-[10px] ml-[90px]">
+                <h1 class="absolute mt-[20px] font-bold text-[30px] text-pink-800">Best Vacation</h1>
+            </div>
+
+            <div class="flex items-start justify-center justify-between p-[100px]">
+
+                <div>
+                    <p class="font-bold mb-2">Site quick links</p>
+                    <p>Flights</p>
+                    <p>Stays</p>
+                    <p>Holidays</p>
+                    <p>Car hire</p>
+                    <p>Tours</p>
+                    <p>Cruises</p>
+                    <p>Rail</p>
+                    <p>Experiences & Day Tours</p>
+                    <p>Business Travel</p>
+                    <p>Publications</p>
+                    <p>Travel Blog</p>
+                    <p>Deals</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Company</p>
+                    <p>About us</p>
+                    <p>Corporate Site</p>
+                    <p>Careers</p>
+                    <p>Advertising</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Extras</p>
+                    <p>Insurance</p>
+                    <p>Gift cards</p>
+                    <p>Holiday finance</p>
+                    <p>Captain's Pack</p>
+                    <p>Online Captain's Pack</p>
+                    <p>Travel eSIM</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Help & support</p>
+                    <p>Help centre</p>
+                    <p>Contact us</p>
+                    <p>Contact us</p>
+                    <p>Privacy</p>
+                    <p>Cookies</p>
+                </div>
+            </div>
+        </footer>
+
+            
+        </main>
+    <!-- </main> -->
+     
+
+    <!-- Login -->
+        <div class="relative">
+            <div id="login" class="fixed  top-[160px] right-[30%]  z-[3] "
+                style="display: none;">
+                <div
+                    class=" mb-[980px] bg-[#F4F8F9] w-[500px] h-[500px] flex flex-col items-center justify-center rounded-[10px] gap-[30px] bg-no-repeat bg-cover bg-center"
+                    style="background-image: url(/img/village-bungalows-along-nam-song-river-vang-vieng-laos.jpg);">
+                    <div>
+                        <p id="close"
+                            class=" relative left-[300px] buttom-0 text-[10px] text-[30px] pt-[80px] cursor-pointer">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </p>
+                        <h1 class="text-black font-bold text-[30px] mt-[10px]">
+                            Login Account
+                        </h1>
+                    </div>
+                    <!-- Head -->
+                    <div class="p-[10px]">
+                        <!-- Username -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path fill-rule="evenodd"
+                                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            <input
+                                class="w-[450px] h-[40px] text-15px shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="text" placeholder="Username">
+                        </div>
+
+                        <!-- email -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path
+                                    d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                <path
+                                    d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                            </svg>
+
+                            <input
+                                class="w-[450px] h-[40px] text-[15px] shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="email" placeholder="Email">
+                        </div>
+
+                        <!-- password -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path fill-rule="evenodd"
+                                    d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <input
+                                class="w-[450px] h-[40px] text-[15px] shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="password" placeholder="Password">
+                        </div>
+
+                        <!-- Forgot-password -->
+                        <div class="p-[10px]">
+                            <p
+                                class="text-blue-900 font-bold text-[12px] ml-[350px] underline underline-offset-2"><a
+                                    href="#">Forgot password</a></p>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <div class="mb-[100px]">
+                        <button
+                            class="bg-black hover:bg-gray-800 duration-300 text-white text-[20px] w-[200px] h-[50px] rounded-[10px] font-bold">
+                            <a href="/Home.html">Login</a></button>
+                    </div>
+                </div>
+            </div>
+
+        <!-- JavaScript -->
+        <script>
+            const login = document.getElementById('login')
+const btnLogin = document.getElementById('btnLogin')
+const close = document.getElementById('close')
+
+// open Login page show
+btnLogin.addEventListener('click', () => {
+    login.style.display = 'block';
+})
+
+// close login page
+close.addEventListener('click', () => {
+    login.style.display = 'none';
+})
+
+// Function to toggle dropdown visibility
+function toggleDropdown(id) {
+    // Get the dropdown being clicked
+    const currentDropdown = document.getElementById(id);
+    
+    // Close all dropdowns except the one being toggled
+    document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
+        if (dropdown.id !== id) {
+            dropdown.classList.add('hidden');
+        }
+    });
+    
+    // Toggle the clicked dropdown
+    currentDropdown.classList.toggle('hidden');
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+    // Check if the click was outside dropdown buttons and menus
+    if (!event.target.closest('button[onclick^="toggleDropdown"]') && 
+        !event.target.closest('#dropdown, #dropdown2, #dropdown3')) {
+        // Close all dropdowns
+        document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
+            dropdown.classList.add('hidden');
+        });
+    }
+});
+         </script>
+    </body>
+</html>

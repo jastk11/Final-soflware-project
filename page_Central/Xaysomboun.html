@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laos</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+    </head>
+    <body class="w-full h-screen font-serif">
+        <nav
+            class="fixed top-0 left-0 w-full h-[90px] bg-white shadow-md py-4 px-8 flex justify-between items-center z-50">
+
+        <!-- logo -->
+            <div
+                class="w-xl flex items-center justify-center gap-2 justify-between">
+                <img
+                    class="w-[50px] h-[50px] rounded-full items-center flex cursor-pointer"
+                    src="/img/Logo.jpeg"
+                    alt="Loading...">
+                <h1 class="text-black text-[30px] font-bold cursor-pointer">Best
+                    Vacation</h1>
+            </div>
+
+        <!-- Button -->
+
+            <div class="items-center justify-center flex gap-4 p-4 relative">
+                <!-- Home -->
+                <div class="relative">
+                    <button
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 duration-300 flex flex-col items-center">
+                        <a href="/Home.html" class="flex flex-row items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 mb-1 mr-2 hover:text-gray-500">
+                                <path
+                                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                                <path
+                                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                            </svg>
+
+                            Home
+                        </a>
+                    </button>
+
+                </div>
+
+        <!-- Dropdown-North -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown')"
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                        North
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 ml-2 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </button>
+                    <div id="dropdown"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="/page_North/Luang Prabang.html"
+                            class="block hover:bg-gray-200 p-2">Luang Prabang</a>
+                        <a href="/page_North/Xieng Khouang.html"
+                            class="block hover:bg-gray-200 p-2">Xieng Khouang</a>
+                    </div>
+                </div>
+
+        <!-- Dropdown-Central -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown2')"
+                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex flex-row items-center justify-center gap-2">
+                        Central
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </button>
+                    <div id="dropdown2"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="/page_Central/Vientiane Capital.html"
+                            class="block hover:bg-gray-200 p-2">Vientiane Capital</a>
+                        <a href="/page_Central/Vientiane Province.html"
+                            class="block hover:bg-gray-200 p-2">Vientiane Province</a>
+                        <a href="/page_Central/Xaysomboun.html"
+                            class="block hover:bg-gray-200 p-2">Xaysomboun</a>
+
+                    </div>
+                </div>
+
+        <!-- Dropdown-South -->
+                <div class="relative">
+                    <button onclick="toggleDropdown('dropdown3')"
+                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                        South
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-4 ml-2 hover:text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+
+                    </button>
+                    <div id="dropdown3"
+                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
+                        <a href="/page_South/Champasak.html"
+                            class="block hover:bg-gray-200 p-2">Champasak</a>
+                        <a href="/page_South/Salavan.html"
+                            class="block hover:bg-gray-200 p-2">Salavan</a>
+                        <a href="/page_South/Attapeu.html"
+                            class="block hover:bg-gray-200 p-2">Attapeu</a>
+                    </div>
+                </div>
+
+        <!-- Suggest -->
+                <div class="relative">
+                    <button
+                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 duration-300 flex items-center justify-center">
+                        <a href="#suggest"
+                            class="flex items-center">
+                            Suggest
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="w-5 h-5 ml-2 hover:text-gray-500">
+                                <path
+                                    d="M6 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H6ZM15.75 3a3 3 0 0 0-3 3v2.25a3 3 0 0 0 3 3H18a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3h-2.25ZM6 12.75a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h2.25a3 3 0 0 0 3-3v-2.25a3 3 0 0 0-3-3H6ZM17.625 13.5a.75.75 0 0 0-1.5 0v2.625H13.5a.75.75 0 0 0 0 1.5h2.625v2.625a.75.75 0 0 0 1.5 0v-2.625h2.625a.75.75 0 0 0 0-1.5h-2.625V13.5Z" />
+                            </svg>
+                        </a>
+                    </button>
+
+                </div>
+            </div>
+
+        <!-- Button-login-logout -->
+            <button class="relative" id="btnLogin">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    fill="currentColor" 
+                    class="size-12">
+                    <path fill-rule="evenodd"
+                        d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </nav>
+
+    <!-- main -->
+    <main class="mt-[100px]">
+
+        <h1 class="text-[60px] font-bold text-center">Xaysomboun</h1>
+
+        <!-- hr -->
+        <div class="flex items-center justify-center p-4">
+            <hr class="border-black border-3 w-[40%]">
+        </div>
+        
+        <!-- Mother1 div -->
+        <div class="flex flex-col items-center justify-center p-4 gap-2">
+            
+            <!-- Phou Hua Lon -->
+            <h1 class="text-[30px] font-bold p-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                   class="size-8 text-red-500 mb-2">
+                   <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg> 
+                Phou Hua Lon</h1>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-[350%]">
+                    <img src="/img/Phouhualon1.jpg" alt="">
+                </div>
+                <div class="w-[350%]">
+                    <p class="text-[14px]">
+                        Phou Hua Lon is situated in Ban Phou Hua Sang, Anouvong District, Xaysomboun Province. It's a prominent and beautiful mountain area, characterized by a series of smaller and larger peaks layered across the landscape. The mountains are covered with lush, green grasslands. In the mornings, the area is often enveloped in a sea of fog, creating a breathtaking view. It is a great spot for viewing natural scenery and sunsets. Phou Hua Lon is a popular tourist destination for both domestic and international visitors. Phou Hua Lon is an ideal place for those who appreciate nature and seek a relaxing getaway.
+                        <br><br>
+                        Phou Hua Lon Trailhead stands as a captivating destination for those seeking adventure amidst stunning natural beauty. Nestled in Laos, this trailhead offers an exceptional experience characterized by breathtaking views and an invigorating atmosphere. The journey to the peak is not only a physical endeavor but also a visual feast, as the landscape unfolds with golden sunlight illuminating the majestic mountain peaks. Visitors are often enchanted by the panoramic 360-degree vistas, which reveal the beauty of the surrounding area, making every step along the trail worthwhile. The trail is lined with grassy knolls, providing a unique walking experience that invites exploration and connection with nature. While the path can present challenges, particularly during the rainy season, the allure of the landscape keeps adventurers returning time and again. With limited shade along the trail, it is essential to prepare adequately by bringing water and sunscreen to fully enjoy the trek. The local flora, including the resilient fovillea, adds to the charm of this natural setting. Phou Hua Lon, meaning "bald head mountain," encapsulates the essence of this destination, where visitors can immerse themselves in the tranquil beauty of Laos. This trailhead not only promises a rewarding hike but also fosters a deep appreciation for the environment, making it a hidden gem for outdoor enthusiasts.
+                        <br><br>
+                        10k kip per person/time lovely in the evening and in the morning. Using the word beautiful is a waste. Its worth the arduous journey. Everyone want to go up in time to see the sunset. Walking up to the top, the atmosphere is very good. Because there are not many people The golden sunlight reflected on the mountain peaks. The cool wind blew. This morning at 6:00, last night it rained heavily and the road was slippery. You must park your car downstairs. Tourists go up and see a magnificent view of 360 degree mist, very beautiful. Can only describe it with the word beautiful. and photographs as seen which is nothing compared to being able to see it with your own eyes.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="flex gap-2">
+              <div> <img src="/img/Phouhualon7.jpg" alt=""></div>
+              <div> <img src="/img/Phouhualon3.jpg" alt=""></div>
+              <div> <img src="/img/Phouhualon4.jpg" alt=""></div>
+            </div>
+
+        </div>
+        <!-- /Mother1 div/ -->
+
+        <!-- hr -->
+        <div id="suggest" class="flex items-center justify-center p-4">
+            <hr class="border-black w-[90%]">
+        </div>
+
+        <!-- Mother2 div -->
+        <div class="flex flex-col items-center justify-center p-4 gap-2">
+
+            <!-- Wat Xieng Thong -->
+            <h1 class="text-[30px] font-bold p-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
+                   class="size-8 text-red-500 mb-2">
+                   <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+                </svg> 
+                Wat Xieng Thong</h1>
+
+            <div class="flex items-center justify-center gap-2">
+                <div class="w-[350%]">
+                    <img src="/img/Xiengthong.jpg" alt="">
+                </div>
+                <div class="w-[350%]">
+                    <p>
+                        Wat Xieng Thong, Luang Prabang's most historically significant temple, exemplifies classic Lao architecture with its sweeping roofs and ornate decorations. Founded in 1560 by King Setthathilat, it commemorates Luang Prabang's legendary first king. Situated at the confluence of the Mekong and Nam Khan rivers, it served as a royal gateway and coronation site.
+                        <br><br>
+                        Under royal patronage until 1975, the temple complex underwent numerous renovations, surviving invasions and neglect. Its sim, chapels, and other structures showcase intricate gold stencils and architectural gems. Notably, the temple features the "flame-of-the-forest" tree motif and reflects Buddhist and folk spirit traditions.
+                        <br><br>
+                        Restorations, including French-assisted projects, have preserved its grandeur. Today, Wat Xieng Thong remains a vital religious and cultural monument, attracting tourists and pilgrims with its rich history and architectural beauty, set amidst gardens and numerous shrines.
+                        
+                    </p>
+                </div>
+            </div>
+    
+            <div class="flex gap-2">
+              <div class="w-[35%]"> <img src="/img/xt1.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/xt2.jpg" alt=""></div>
+              <div class="w-[35%]"> <img src="/img/xt3.jpg" alt=""></div>
+            </div>
+
+        </div>
+        <!-- /Mother2 div/ -->
+        
+         
+
+
+        <!-- Footer -->
+        <footer class="bg-gray-300 relative absolute mt-[50px]">
+
+            <div class="p-[10px] ml-[90px]">
+                <h1 class="absolute mt-[20px] font-bold text-[30px] text-pink-800">Best Vacation</h1>
+            </div>
+
+            <div class="flex items-start justify-center justify-between p-[100px]">
+
+                <div>
+                    <p class="font-bold mb-2">Site quick links</p>
+                    <p>Flights</p>
+                    <p>Stays</p>
+                    <p>Holidays</p>
+                    <p>Car hire</p>
+                    <p>Tours</p>
+                    <p>Cruises</p>
+                    <p>Rail</p>
+                    <p>Experiences & Day Tours</p>
+                    <p>Business Travel</p>
+                    <p>Publications</p>
+                    <p>Travel Blog</p>
+                    <p>Deals</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Company</p>
+                    <p>About us</p>
+                    <p>Corporate Site</p>
+                    <p>Careers</p>
+                    <p>Advertising</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Extras</p>
+                    <p>Insurance</p>
+                    <p>Gift cards</p>
+                    <p>Holiday finance</p>
+                    <p>Captain's Pack</p>
+                    <p>Online Captain's Pack</p>
+                    <p>Travel eSIM</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-2">Help & support</p>
+                    <p>Help centre</p>
+                    <p>Contact us</p>
+                    <p>Contact us</p>
+                    <p>Privacy</p>
+                    <p>Cookies</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Login -->
+        <div class="relative">
+            <div id="login" class="fixed  top-[160px] right-[30%]  z-[3] "
+                style="display: none;">
+                <div
+                    class=" mb-[980px] bg-[#F4F8F9] w-[500px] h-[500px] flex flex-col items-center justify-center rounded-[10px] gap-[30px] bg-no-repeat bg-cover bg-center"
+                    style="background-image: url(/img/village-bungalows-along-nam-song-river-vang-vieng-laos.jpg);">
+                    <div>
+                        <p id="close"
+                            class=" relative left-[300px] buttom-0 text-[10px] text-[30px] pt-[80px] cursor-pointer">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </p>
+                        <h1 class="text-black font-bold text-[30px] mt-[10px]">
+                            Login Account
+                        </h1>
+                    </div>
+                    <!-- Head -->
+                    <div class="p-[10px]">
+                        <!-- Username -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path fill-rule="evenodd"
+                                    d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+
+                            <input
+                                class="w-[450px] h-[40px] text-15px shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="text" placeholder="Username">
+                        </div>
+
+                        <!-- email -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path
+                                    d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                <path
+                                    d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                            </svg>
+
+                            <input
+                                class="w-[450px] h-[40px] text-[15px] shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="email" placeholder="Email">
+                        </div>
+
+                        <!-- password -->
+                        <div class="relative flex items-center p-[10px]">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24" fill="currentColor"
+                                class="size-6 absolute ml-3">
+                                <path fill-rule="evenodd"
+                                    d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <input
+                                class="w-[450px] h-[40px] text-[15px] shadow-lg rounded-[5px] pl-[50px] ring-2 ring-gray-200 focus:ring-gray-400 focus:ring-2 outline-none"
+                                type="password" placeholder="Password">
+                        </div>
+
+                        <!-- Forgot-password -->
+                        <div class="p-[10px]">
+                            <p
+                                class="text-blue-900 font-bold text-[12px] ml-[350px] underline underline-offset-2"><a
+                                    href="#">Forgot password</a></p>
+                        </div>
+                    </div>
+
+                    <!-- button -->
+                    <div class="mb-[100px]">
+                        <button
+                            class="bg-black hover:bg-gray-800 duration-300 text-white text-[20px] w-[200px] h-[50px] rounded-[10px] font-bold">
+                            <a href="/Home.html">Login</a></button>
+                    </div>
+                </div>
+            </div>
+
+        <!-- JavaScript -->
+         <script>
+const login = document.getElementById('login')
+const btnLogin = document.getElementById('btnLogin')
+const close = document.getElementById('close')
+
+// open Login page show
+btnLogin.addEventListener('click', function (){
+    login.style.display = 'block';
+})
+
+// close login page
+close.addEventListener('click', function (){
+    login.style.display = 'none';
+})
+
+// Function to toggle dropdown visibility
+function toggleDropdown(id) {
+    // Get the dropdown being clicked
+    const currentDropdown = document.getElementById(id);
+    
+    // Close all dropdowns except the one being toggled
+    document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
+        if (dropdown.id !== id) {
+            dropdown.classList.add('hidden');
+        }
+    });
+
+    
+    // Toggle the clicked dropdown
+    currentDropdown.classList.toggle('hidden');
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+    // Check if the click was outside dropdown buttons and menus
+    if (!event.target.closest('button[onclick^="toggleDropdown"]') && 
+        !event.target.closest('#dropdown, #dropdown2, #dropdown3')) {
+        // Close all dropdowns
+        document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
+            dropdown.classList.add('hidden');
+        });
+    }
+});
+         </script>
+
+    </body>
+</html>
