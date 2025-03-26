@@ -47,9 +47,9 @@
                 </div>
 
         <!-- Dropdown-North -->
-                <div class="relative">
-                    <button onclick="toggleDropdown('dropdown')"
-                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                <div class="relative group">
+                    <button 
+                        class="text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 group-focus-within:bg-gray-200 duration-300 flex items-center justify-center gap-2">
                         North
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke-width="1.5"
@@ -59,19 +59,19 @@
                                 d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
                         </svg>
                     </button>
-                    <div id="dropdown"
-                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
-                        <a href="/page_North/Luang Prabang.html"
+                    <div 
+                        class="hidden group-focus-within:block absolute bg-gray-300 text-black rounded w-[150px] z-10">
+                        <a href="./page_North/Luang Prabang.html"
                             class="block hover:bg-gray-200 p-2">Luang Prabang</a>
-                        <a href="/page_North/Xieng Khouang.html"
+                        <a href="./page_North/Xieng Khouang.html"
                             class="block hover:bg-gray-200 p-2">Xieng Khouang</a>
                     </div>
                 </div>
 
         <!-- Dropdown-Central -->
-                <div class="relative">
-                    <button onclick="toggleDropdown('dropdown2')"
-                        class=" text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex flex-row items-center justify-center gap-2">
+                <div class="relative group">
+                    <button 
+                        class="text-black font-bold w-[150px] p-[15px] rounded-[8px] hover:bg-gray-200 group-focus-within:bg-gray-200 duration-300 flex flex-row items-center justify-center gap-2">
                         Central
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke-width="1.5"
@@ -81,22 +81,21 @@
                                 d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
                         </svg>
                     </button>
-                    <div id="dropdown2"
-                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
-                        <a href="/page_Central/Vientiane Capital.html"
+                    <div 
+                        class="hidden group-focus-within:block absolute bg-gray-300 text-black rounded w-[150px] z-10">
+                        <a href="./page_Central/Vientiane Capital.html"
                             class="block hover:bg-gray-200 p-2">Vientiane Capital</a>
-                        <a href="/page_Central/Vientiane Province.html"
+                        <a href="./page_Central/Vientiane Province.html"
                             class="block hover:bg-gray-200 p-2">Vientiane Province</a>
-                        <a href="/page_Central/Xaysomboun.html"
+                        <a href="./page_Central/Xaysomboun.html"
                             class="block hover:bg-gray-200 p-2">Xaysomboun</a>
-
                     </div>
                 </div>
 
         <!-- Dropdown-South -->
-                <div class="relative">
-                    <button onclick="toggleDropdown('dropdown3')"
-                        class=" text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 focus:bg-gray-200 duration-300 flex items-center justify-center gap-2">
+                <div class="relative group">
+                    <button 
+                        class="text-black font-bold w-[150px] p-4 rounded-[8px] hover:bg-gray-200 group-focus-within:bg-gray-200 duration-300 flex items-center justify-center gap-2">
                         South
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke-width="1.5"
@@ -105,13 +104,12 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
                         </svg>
-
                     </button>
-                    <div id="dropdown3"
-                        class="hidden absolute bg-gray-300 text-black rounded w-[150px]">
-                        <a href="/page_South/Champasak.html"
+                    <div 
+                        class="hidden group-focus-within:block absolute bg-gray-300 text-black rounded w-[150px] z-10">
+                        <a href="./page_South/Champasak.html"
                             class="block hover:bg-gray-200 p-2">Champasak</a>
-                        <a href="/page_South/Attapeu.html"
+                        <a href="./page_South/Attapeu.html"
                             class="block hover:bg-gray-200 p-2">Attapeu</a>
                     </div>
                 </div>
@@ -265,69 +263,7 @@
 
 
     <!-- JavaScript -->
-     <script>
-
-    // Login logout
-    function showLogin() {
-        document.getElementById("loginBox").classList.remove("hidden");
-    }
-
-    function hideLogin() {
-        document.getElementById("loginBox").classList.add("hidden");
-    }
-
-    function login() {
-        if (document.getElementById("username").value === "admin" && document.getElementById("email").value === "ssmidvacha@gmail.com" && document.getElementById("password").value === "1234") {
-            localStorage.setItem("loggedIn", "true");
-            updateUI();
-        } else {
-            document.getElementById("errorMsg").classList.remove("hidden");
-        }
-    }
-
-    function logout() {
-        localStorage.removeItem("loggedIn");
-        updateUI();
-    }
-
-    function updateUI() {
-        let isLoggedIn = localStorage.getItem("loggedIn");
-        document.getElementById("navLoginBtn").classList.toggle("hidden", isLoggedIn);
-        document.getElementById("navLogoutBtn").classList.toggle("hidden", !isLoggedIn);
-        hideLogin();
-    }
-
-    updateUI();
-
-    // Function to toggle dropdown visibility
-    function toggleDropdown(id) {
-        // Get the dropdown being clicked
-        const currentDropdown = document.getElementById(id);
-        
-        // Close all dropdowns except the one being toggled
-        document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
-            if (dropdown.id !== id) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-        
-        // Toggle the clicked dropdown
-        currentDropdown.classList.toggle('hidden');
-    }
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(event) {
-        // Check if the click was outside dropdown buttons and menus
-        if (!event.target.closest('button[onclick^="toggleDropdown"]') && 
-            !event.target.closest('#dropdown, #dropdown2, #dropdown3')) {
-            // Close all dropdowns
-            document.querySelectorAll('#dropdown, #dropdown2, #dropdown3').forEach(dropdown => {
-                dropdown.classList.add('hidden');
-            });
-        }
-    });
-         </script>
+     <script src="/inedex.js"></script>
 
     </body>
 </html>
